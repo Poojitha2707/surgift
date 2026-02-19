@@ -1,0 +1,349 @@
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", sans-serif;
+  background: radial-gradient(circle at top left, #1b1f3b, #090b1a);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 40px;
+  background: linear-gradient(90deg, #ff2fdc, #00f7ff);
+  color: #000;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px rgba(255, 47, 220, 0.8);
+}
+
+.fade-in {
+  animation: fade 2s ease;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.video {
+  width: 80%;
+  max-width: 500px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.center-btn {
+  display: block;
+  margin: 30px auto;
+}
+
+.final {
+  padding: 10px 20px;
+}
+.bg-animation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-animation span {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: float 18s linear infinite;
+}
+
+.bg-animation span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.bg-animation span:nth-child(2) {
+  left: 30%;
+  animation-delay: 3s;
+}
+.bg-animation span:nth-child(3) {
+  left: 50%;
+  animation-delay: 6s;
+}
+.bg-animation span:nth-child(4) {
+  left: 70%;
+  animation-delay: 9s;
+}
+.bg-animation span:nth-child(5) {
+  left: 85%;
+  animation-delay: 12s;
+}
+.bg-animation span:nth-child(6) {
+  left: 95%;
+  animation-delay: 15s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(110vh) scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-10vh) scale(1);
+    opacity: 1;
+  }
+}
+h1, h2 {
+  color: #e6faff;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+p {
+  color: #cfd9ff;
+  max-width: 500px;
+  margin: auto;
+}
+.glass-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 50px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.romantic-bg {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #2a0f2f, #4b1c4d, #1a1a3a);
+  overflow: hidden;
+  z-index: -3;
+}
+
+.heart {
+  position: absolute;
+  bottom: -60px;
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 105, 180, 0.8);
+  transform: rotate(45deg);
+  animation: floatHeart linear infinite;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.8);
+}
+
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -9px;
+  left: 0;
+}
+
+.heart::after {
+  left: -9px;
+  top: 0;
+}
+.heart:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+  left: 25%;
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(3) {
+  left: 40%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(4) {
+  left: 55%;
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(5) {
+  left: 70%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(6) {
+  left: 85%;
+  animation-duration: 16s;
+  animation-delay: 0s;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+.memory-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.memory-card img {
+  width: 100%;
+  height: 260px;           /* SAME HEIGHT FOR ALL */
+  object-fit: cover;      /* CROPS PROPERLY */
+  border-radius: 14px;
+}
+.memory-card p {
+  margin-top: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f0eaff;
+}
+.memory-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25);
+}
+.memory-card {
+  animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.memories-page {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.page-title {
+    margin: 10px 0 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #fff;
+}
+
+.slideshow-container {
+    width: 360px;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+    animation: fade 1.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255,105,180,0.4);
+}
+
+.slide p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

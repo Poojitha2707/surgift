@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Memories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="romantic-bg">
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+</div>
+
+<section class="memories-page">
+    <h2 class="page-title">Our Memories</h2>
+
+    <div class="slideshow-container">
+
+        <div class="slide active">
+            <img src="image1.jpeg">
+            <p>That day when everything felt perfect, just because we were together</p>
+        </div>
+
+        <div class="slide">
+            <img src="image2.jpeg">
+            <p>Two smiles, one bond -- something i'll always hold close to my heart</p>
+        </div>
+
+        <div class="slide">
+            <img src="image3.jpeg">
+            <p>Two hearts -- one beautiful journey</p>
+        </div>
+
+        <div class="slide">
+            <img src="image4.jpeg">
+            <p>Smiles that still make my heart warm</p>
+        </div>
+
+        <div class="slide">
+            <img src="image5.jpeg">
+            <p>No faces, no words -- just love, quietly existing between us</p>
+        </div>
+
+        <div class="slide">
+            <img src="image6.jpeg">
+            <p>A moment where happiness felt easy and real</p>
+        </div>
+
+        <div class="slide">
+            <img src="image7.jpeg">
+            <p>Side by side, just like how I hope life keeps us</p>
+        </div>
+
+        <div class="slide">
+            <img src="image8.jpeg">
+            <p>Reflections fade, but the memories stay forever</p>
+        </div>
+
+        <div class="slide">
+            <img src="image9.jpeg">
+            <p>A friendship that became family</p>
+        </div>
+
+        <div class="slide">
+            <img src="image10.jpeg">
+            <p>A bond that time can never fade</p>
+        </div>
+
+        <div class="slide">
+            <img src="image11.jpeg">
+            <p>Moments that made growing up magical</p>
+        </div>
+
+        <div class="slide">
+            <img src="image12.jpeg">
+            <p>Forever grateful for memories like this</p>
+        </div>
+
+    </div>
+</section>
+    <audio id="memoryMusic" loop>
+  <source src="music1.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<center><a href="videos.html" class="btn">Continue</a></center>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+}
+
+setInterval(showNextSlide, 3000); // change every 3.5 seconds
+  const memoryMusic = document.getElementById("memoryMusic");
+
+  window.addEventListener("load", () => {
+    memoryMusic.volume = 0.4;
+    memoryMusic.play();
+  });
+</script>
+
+
+</body>
+</html>

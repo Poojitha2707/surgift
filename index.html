@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="romantic-bg">
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+</div>
+
+
+<div class="hero">
+  <div class="glass-box">
+    <h1>Happy Birthday My Girllll 🩷</h1>
+    <p>
+        Today is about you, the memories we share, and the love that words can’t fully explain.<br>
+        This is not just a website 
+        It’s something made with love 🫶<br>
+        Thank you for being a part of my life,
+my memories,
+and my heart 😘<br>
+        just for you...💞
+    </p>
+    <audio id="homeMusic" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+    <a href="memories.html" class="btn">Begin the Journey</a>
+  </div>
+</div>
+<script>
+  const homeMusic = document.getElementById("homeMusic");
+
+  // Play music on first user click
+  document.addEventListener("click", () => {
+    homeMusic.volume = 0.4; // soft volume
+    homeMusic.play().catch(err => console.log("Music blocked:", err));
+  }, { once: true });
+
+  // Stop music and go to memories page
+  function goToMemories() {
+    homeMusic.pause();
+    homeMusic.currentTime = 0;
+    window.location.href = "memories.html";
+  }
+</script>
+
+</body>
+
+</html>
